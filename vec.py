@@ -71,13 +71,10 @@ class Vec2:
         if self._x or self._y:
             self.x = self._x
             self.y = self._y
-            return
-        if self._angle and self._ln:
+        elif self._angle and self._ln:
             self.angle = self._angle
-            return
-        if self._ln:
+        elif self._ln:
             self.ln = self._ln
-            return
 
     def _change_val(self, other, action: str):
         assert type(other) in (type(self), float, int), 'Bad type, possibles: Vec, float, int'
